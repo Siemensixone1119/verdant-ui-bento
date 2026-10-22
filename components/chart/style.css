@@ -1,0 +1,10 @@
+/* Локальные стили компонента. Общие токены подключены из shared/css/. */
+.component-page{min-height:100vh;max-width:1080px;margin:auto;padding:28px clamp(16px,4vw,48px);display:flex;flex-direction:column;gap:26px}
+.component-top,.component-footer{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.component-top .back{color:var(--accent);font-weight:700;text-decoration:none}
+.component-page main{flex:1}.component-page h1{font-size:clamp(30px,4vw,48px);letter-spacing:-.035em;margin:10px 0 26px}
+.component-demo{min-height:210px;padding:clamp(20px,3vw,32px)}.component-demo .field{max-width:620px}
+.component-footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted)}.hint{margin-top:16px;font-size:14px}
+.stack{display:grid;gap:16px}.sample-shell{display:grid;grid-template-columns:minmax(150px,220px) 1fr;min-height:240px;gap:20px}.sample-sidebar{display:flex;flex-direction:column;gap:10px;border-right:1px solid var(--line);padding-right:12px}.sample-nav{padding:10px;color:var(--text);border-radius:7px}.sample-nav.active{background:var(--panel2);color:var(--accent)}
+.demo-header,.demo-footer{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:16px;border:1px solid var(--line);border-radius:7px}.demo-site{display:grid;gap:20px}.demo-footer{color:var(--muted)}.crumbs{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.crumbs a{color:var(--accent)}
+@media(max-width:650px){.sample-shell{grid-template-columns:1fr}.sample-sidebar{border-right:0;border-bottom:1px solid var(--line);padding:0 0 16px}.component-page{padding:16px}.component-top .btn{min-width:auto}}

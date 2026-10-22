@@ -1,0 +1,2 @@
+import {el,money} from '../core/dom.js';
+export function dataCards(root,items,{onClick=()=>{}}={}){root.replaceChildren();for(const it of items){const c=el('article','card-mini'),category=el('span','badge',it.category||'Услуга'),title=el('strong','',it.title),desc=el('p','muted',it.description||''),bottom=el('div','panel-head'),price=el('strong','',money(it.price||0)),btn=el('button','icon-btn','→');btn.setAttribute('aria-label','Подробнее');btn.onclick=()=>onClick(it);bottom.append(price,btn);c.append(category,title,desc,bottom);root.append(c)}}

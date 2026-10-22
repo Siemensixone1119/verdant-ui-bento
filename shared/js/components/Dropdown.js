@@ -1,0 +1,2 @@
+import {el} from '../core/dom.js';
+export function dropdown(button,items){const wrapper=el('span','relative');button.replaceWith(wrapper);wrapper.append(button);let menu;const close=()=>{menu?.remove();menu=null};button.onclick=(e)=>{e.stopPropagation();if(menu){close();return}menu=el('div','drop-menu');menu.style.right=0;menu.style.top='45px';items.forEach(item=>{const b=el('button','',item.label);b.onclick=()=>{item.action?.();close()};menu.append(b)});wrapper.append(menu)};document.addEventListener('click',e=>{if(!wrapper.contains(e.target))close()});return wrapper}

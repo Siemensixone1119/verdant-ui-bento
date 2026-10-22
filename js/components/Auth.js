@@ -1,0 +1,2 @@
+import {Form} from './Form.js';
+export function authForm(root,{mode='login',onSubmit}={}){return new Form(root,{fields:mode==='register'?[{name:'name',label:'Имя',required:true},{name:'email',label:'Электронная почта',type:'email',required:true},{name:'password',label:'Пароль',type:'password',required:true,minLength:6}]:[{name:'email',label:'Электронная почта',type:'email',required:true},{name:'password',label:'Пароль',type:'password',required:true}],submitLabel:mode==='login'?'Войти':'Зарегистрироваться',onSubmit})}
